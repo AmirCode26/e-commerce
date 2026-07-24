@@ -1,3 +1,5 @@
+// /src/app/page_components/Main_page.tsx
+//
 import Catalog from "./Catalog";
 
 function Main_page() {

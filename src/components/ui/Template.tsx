@@ -1,17 +1,13 @@
 import Nav from "../nav/Nav";
-//import Side from "../side/Side";
 
 function Template({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="relative min-h-full overflow-y-scroll ">
+    <div className="relative min-h-dvh overflow-x-hidden">
       <Nav />
       {children}
     </div>
   );
 }
-
 export default Template;

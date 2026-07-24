@@ -1,4 +1,4 @@
-// components/catalog/Catalog.tsx
+// /src/app/page_components/Catalog.tsx
 "use client";
 import { useState } from "react";
 import ProductCard from "@/components/ui/cards/Product_card";
@@ -37,7 +37,7 @@ function Catalog() {
      return coincideCategoria && coincideBusqueda;
    });
   return (
-    <section id="catalog" className="w-screen relative top-[20dvh] md:top-0 p-2 flex flex-col gap-6">
+    <section id="catalog" className="w-screen mt-[20dvh] md:mt-0 p-2 md:p-4 flex flex-col gap-4 md:gap-6">
       {/* Barra superior: búsqueda + filtros */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className={cn("text-2xl",lobster_two.className)}>

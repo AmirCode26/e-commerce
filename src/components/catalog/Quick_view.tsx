@@ -1,3 +1,5 @@
+// /src/components/catalog/Quick_view.tsx
+
 "use client";
 import Image from "next/image";
 import { X, Minus, Plus, Trash2 } from "lucide-react";
@@ -13,7 +15,8 @@ interface QuickViewProps {
 function Quick_view({ product, onClose }: QuickViewProps) {
   const [visible, setVisible] = useState(false);
   const [localQuantity, setLocalQuantity] = useState(1);
-  const { cart, addToCart, removeFromCart, updateQuantity } = useHomeContext().cartContext;
+  const { cart, addToCart, removeFromCart, updateQuantity } =
+    useHomeContext().cartContext;
 
   const itemEnCarrito = cart.find((item) => item.id === product.id);
   const enCarrito = !!itemEnCarrito;
@@ -50,12 +53,18 @@ function Quick_view({ product, onClose }: QuickViewProps) {
 
       {/* Panel */}
       <div
-        className={`fixed left-0 w-full h-[50vh] z-150 bg-[#faf0d7] grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1 transition-all duration-300 ${
-          visible ? "bottom-[25vh] opacity-100" : "bottom-0 opacity-0"
+        className={`fixed left-0 w-full h-[75dvh] md:h-[50dvh] z-150 bg-[#faf0d7] grid grid-cols-1 grid-rows-7 md:grid-cols-2 md:grid-rows-1 transition-all duration-300 ${
+          visible ? "top-[25dvh] opacity-100" : "bottom-0 opacity-0"
         }`}
       >
+        <button
+          onClick={handleClose}
+          className="z-50 absolute top-4 right-4 p-1 hover:bg-gray-200 rounded-full transition-colors"
+        >
+          <X size={20} />
+        </button>
         {/* Imagen con blur */}
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full h-full overflow-hidden row-span-2">
           <Image
             src={product.image}
             alt={product.title}
@@ -76,15 +85,10 @@ function Quick_view({ product, onClose }: QuickViewProps) {
         </div>
 
         {/* Info */}
-        <div className="flex flex-col justify-center items-end text-right gap-3 p-8">
-          <button
-            onClick={handleClose}
-            className="absolute top-4 right-4 p-1 hover:bg-gray-200 rounded-full transition-colors"
-          >
-            <X size={20} />
-          </button>
-
-          <h2 className="text-3xl font-medium text-gray-900">{product.title}</h2>
+        <div className="grid justify-center items-end text-right gap-3 p-8 overflow-y-auto row-span-5">
+          <h2 className="text-3xl font-medium text-gray-900">
+            {product.title}
+          </h2>
           <p className="text-gray-600 text-sm">{product.desc}</p>
           <span className="text-2xl text-gray-900">RD${product.price}</span>
 
@@ -130,7 +134,9 @@ function Quick_view({ product, onClose }: QuickViewProps) {
           </div>
 
           <span className="text-xs text-gray-400">
-            Subtotal: RD${product.price * (enCarrito ? itemEnCarrito.quantity : localQuantity)}
+            Subtotal: RD$
+            {product.price *
+              (enCarrito ? itemEnCarrito.quantity : localQuantity)}
           </span>
 
           {/* Botón agregar al carrito */}
@@ -150,7 +156,7 @@ function Quick_view({ product, onClose }: QuickViewProps) {
           </button>
 
           {/* Botón WhatsApp directo — independiente del carrito */}
-<a
+          <a
             className="mt-1 px-8 py-3 bg-green-400 text-gray-900 uppercase tracking-widest text-sm hover:bg-green-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"

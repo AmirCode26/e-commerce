@@ -1,3 +1,5 @@
+// /src/components/nav/Cart_view.tsx
+
 "use client";
 import Image from "next/image";
 import { X, ShoppingCart, Minus, Plus, Trash2 } from "lucide-react";
@@ -56,7 +58,7 @@ function Cart_view({ onClose }: CartViewProps) {
 
       {/* Panel */}
       <div
-        className={`fixed left-0 w-full h-[70vh] z-50 bg-[#faf0d7] flex flex-col transition-all duration-300 ${
+        className={`fixed left-0 w-full h-[70dvh] z-50 bg-[#faf0d7] flex flex-col transition-all duration-300 ${
           visible ? "top-[16vh] opacity-100" : "bottom-0 opacity-0"
         }`}
       >
