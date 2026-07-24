@@ -1,10 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+# That's my first "Paid" services as a web Developer :)
 ## Getting Started
 
-First, run the development server:
+First, run the development server (Obviusly):
 
 ```bash
+bun run dev <---- For performanence
+# or
 npm run dev
 # or
 yarn dev
@@ -15,22 +16,16 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Also u can  see the app on the following domain: (Oh really, thats project don't  have a domain yet)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.tsx`. Sorry if it have bugs haha :)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How it works? 
+**IDK, but it works 0.0**
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Just kidding, first, when u enter to the website, u can see
+a menu (That's  in Spanish cause me and my client speak Spanish)
+There  is a  picture: (PC)
+![Home Screenshot](./src/archive/etc/home_screenshot.png)
+(Mobile)
+![Home Screenshot](./src/archive/etc/home_screenshot_mobile.png)
