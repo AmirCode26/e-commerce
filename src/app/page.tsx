@@ -27,7 +27,7 @@ export default function Home() {
 
       <div className="grid grid-cols-2 md:flex md:flex-col gap-3 md:gap-4 w-full md:row-span-3">
         {pages_anchors.map((item) => (
-          <Anchor_card key={item.param} item={item} onClick={() => { window.location.href = `/catalogo?c=${item.param}`; }} />
+          <Anchor_card key={item.param} item={item} onClick={() => { window.location.href = item.param === "all" ? "/catalogo" : `/catalogo?c=${item.param}`; }} />
         ))}
       </div>
     </div>

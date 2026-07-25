@@ -29,7 +29,7 @@ export function Mega_menu({
         <X size={28} />
       </button>
       <div className="h-full flex items-center justify-center px-6 md:px-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-4xl">
+        <div className="grid grid-cols-4 gap-4 md:gap-6 w-full max-w-4xl">
           {pages_anchors.map((item) => (
             <Anchor_card
               key={item.param}

@@ -6,6 +6,7 @@ import { X, Minus, Plus, Trash2 } from "lucide-react";
 import { ProductCardProps } from "@/types/Product.mjs";
 import { useState, useEffect } from "react";
 import { useHomeContext } from "@/context/HomeContext";
+import Link from "next/link";
 
 interface QuickViewProps {
   product: ProductCardProps;
@@ -64,7 +65,7 @@ function Quick_view({ product, onClose }: QuickViewProps) {
           <X size={20} />
         </button>
         {/* Imagen con blur */}
-        <div className="relative w-full h-full overflow-hidden row-span-2">
+        <div className="relative w-full  h-[21dvh] md:h-full overflow-hidden row-span-2">
           <Image
             src={product.image}
             alt={product.title}
@@ -73,13 +74,13 @@ function Quick_view({ product, onClose }: QuickViewProps) {
             className="object-cover blur-2xl scale-110"
           />
           <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 flex items-center justify-center p-6">
+          <div className="absolute h-full inset-0 flex items-center justify-center p-6">
             <Image
               src={product.image}
               alt={product.title}
               fill
               quality={90}
-              className="object-contain"
+              className="object-contain h-full"
             />
           </div>
         </div>
@@ -156,14 +157,14 @@ function Quick_view({ product, onClose }: QuickViewProps) {
           </button>
 
           {/* Botón WhatsApp directo — independiente del carrito */}
-          <a
+          <Link
             className="mt-1 px-8 py-3 bg-green-400 text-gray-900 uppercase tracking-widest text-sm hover:bg-green-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
             href={`https://wa.me/18294973428?text=${encodeURIComponent(mensajeWhatsAppDirecto)}`}
           >
             Pedir por WhatsApp
-          </a>
+          </Link>
         </div>
       </div>
     </>

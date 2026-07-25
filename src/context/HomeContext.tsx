@@ -11,7 +11,7 @@ import {
 import { CartItem, ProductCardProps } from "@/types/Product.mjs";
 import axios from "axios";
 import { Page_anchor } from "@/types/Page_anchor.mjs";
-import { Baby, Globe, Shirt } from "lucide-react";
+import { Baby, Home, LayoutGrid, Shirt } from "lucide-react";
 
 interface HomeContextType {
   catalogContext: {
@@ -76,22 +76,28 @@ const HomeContextProvider = ({ children }: { children: ReactNode }) => {
   const clearCart = () => setCart([]);
   const pages_anchors = [
     {
+      icon: LayoutGrid,
+      label: "Todo",
+      desc: "Nuestro catalogo completo",
+      param: "all",
+    },
+    {
       icon: Shirt,
       label: "Sublimaciones",
       desc: "Ropa y accesorios personalizados",
-      param: "sublimaciones",
+      param: "sbl",
     },
     {
       icon: Baby,
       label: "Bebes",
       desc: "Todo para los más pequeños",
-      param: "bebes",
+      param: "beb",
     },
     {
-      icon: Globe,
+      icon: Home,
       label: "Hogar",
       desc: "Productos para toda la familia",
-      param: "imports",
+      param: "imp",
     },
   ]
   return (
