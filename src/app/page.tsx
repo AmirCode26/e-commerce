@@ -21,7 +21,7 @@ export default function Home() {
         <Image
           width={300} height={300}
           src="/assets/doritashop_logo.png" alt="Dorita Shop"
-          className="w-40 h-40 md:w-full md:h-full max-w-[280px] object-contain rounded-xl md:border-4 md:border-stone-200 select-none"
+          className="w-40 h-40 md:w-full md:h-full max-w-70 object-contain select-none"
         />
       </div>
 
