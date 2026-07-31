@@ -1,83 +1,112 @@
   [
     {
       "id": "8f2c3d4e-5a6b-4c7d-8e9f-0a1b2c3d4e5f",
-      "image": "/assets/products/tshirts/001.jpeg",
+      "image": "/assets/products/sbl/tshirts/001.jpeg",
       "title": "Camisa sublimada",
       "desc": "Diseño Venezuela full print, colores vibrantes",
       "price": 500,
+      "param":"sbl",
+      "stock": 0,
       "category": "Camisetas",
       "keys": ["venezuela", "full print", "vibrante", "camisa", "poloche"]
     },
     {
       "id": "3b241101-e2bb-4255-8caf-4136c566a962",
-      "image": "/assets/products/tshirts/002.jpeg",
+      "image": "/assets/products/sbl/tshirts/002.jpeg",
       "title": "Camisa sublimada",
       "desc": "Diseño personalizado, estilo artístico",
       "price": 500,
+      "param":"sbl",
+      "stock": 0,
       "category": "Camisetas",
       "keys": ["personalizado", "artistico", "camisa", "poloche"]
     },
     {
       "id": "a80f83e2-81e0-47b6-9f4a-81977f6f193d",
-      "image": "/assets/products/tshirts/003.jpeg",
+      "image": "/assets/products/sbl/tshirts/003.jpeg",
       "title": "Poloche personalizado",
       "desc": "Tienes un amigo en mí, diseño full print manga larga",
       "price": 500,
+      "param":"sbl",
+      "stock": 0,
       "category": "Camisetas",
       "keys": ["amigo", "full print", "manga larga", "poloche"]
     },
     {
       "id": "9c8b7a65-4d3e-4210-9182-736451029384",
-      "image": "/assets/products/travel_mugs/001.jpeg",
+      "image": "/assets/products/sbl/travel_mugs/001.jpeg",
       "title": "Termo termico",
       "desc": "Diseño guerreras kpop personalizado, colores neón",
       "price": 600,
+      "param":"sbl",
+      "stock": 0,
       "category": "Termos",
       "keys": ["kpop", "guerreras", "neon", "personalizado"]
     },
     {
       "id": "e3d2c1b0-a987-4654-8321-0fedcba98765",
-      "image": "/assets/products/travel_mugs/002.jpeg",
+      "image": "/assets/products/sbl/travel_mugs/002.jpeg",
       "title": "Termo termico",
       "desc": "Diseño Venezuela multicolor, edición especial",
       "price": 600,
+      "param":"sbl",
+      "stock": 0,
       "category": "Termos",
       "keys": ["venezuela", "multicolor", "edicion especial", "termos"]
     },
     {
       "id": "7f1e2d3c-4b5a-4678-8901-23456789abcd",
-      "image": "/assets/products/travel_mugs/003.jpeg",
+      "image": "/assets/products/sbl/travel_mugs/003.jpeg",
       "title": "Termo termico",
       "desc": "Diseño medico, estilo vibrante y colorido",
       "price": 600,
+      "param":"sbl",
+      "stock": 0,
       "category": "Termos",
       "keys": ["medico", "vibrante", "colorido"]
     },
     {
       "id": "123e4567-e89b-42d3-a456-426614174000",
-      "image": "/assets/products/travel_mugs/004.jpeg",
+      "image": "/assets/products/sbl/travel_mugs/004.jpeg",
       "title": "Termo termico Hello Kitty",
       "desc": "Diseño Hello Kitty rosa, edición especial",
       "price": 600,
+      "param":"sbl",
+      "stock": 0,
       "category": "Termos",
       "keys": ["hello kitty", "rosa", "edicion especial"]
     },
     {
       "id": "b5e4d3c2-b1a0-4987-b654-3210fedcba98",
-      "image": "/assets/products/mugs/001.jpeg",
+      "image": "/assets/products/sbl/mugs/001.jpeg",
       "title": "Taza sublimada",
       "desc": "Tazas al detalle y al por mayor, diseños personalizados",
       "price": 450,
+      "param":"sbl",
+      "stock": 0,
       "category": "Tazas",
       "keys": ["por mayor", "detalle", "personalizado", "taza"]
     },
     {
       "id": "8d7c6b5a-4e3f-4210-89ab-cdef01234567",
-      "image": "/assets/products/mugs/002.jpeg",
+      "image": "/assets/products/sbl/mugs/002.jpeg",
       "title": "Taza sublimada",
       "desc": "Taza con inicial personalizada, diseño colorido floral",
       "price": 450,
+      "param":"sbl",
+      "stock": 0,
       "category": "Tazas",
       "keys": ["inicial", "letra", "floral", "colorido", "taza"]
+    },
+    {
+      "id":"e91d404f-4c93-42fa-a944-5b295c3e0185",
+      "image": "/assets/products/beb/pampSael.png",
+      "title": "Paquete de pamper Sael",
+      "desc": "Paquete de 16 pañales Sael",
+      "price": 180,
+      "param":"beb",
+      "stock": 0,
+      "category": "Pampers",
+      "keys": ["pamper", "sael", "16", "pañales", ""]
     }
   ]

@@ -7,6 +7,7 @@ import { ProductCardProps } from "@/types/Product.mjs";
 import { useState, useEffect } from "react";
 import { useHomeContext } from "@/context/HomeContext";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface QuickViewProps {
   product: ProductCardProps;
@@ -21,7 +22,9 @@ function Quick_view({ product, onClose }: QuickViewProps) {
 
   const itemEnCarrito = cart.find((item) => item.id === product.id);
   const enCarrito = !!itemEnCarrito;
-
+  const stockDisponible = product.stock;
+  const cantidadEnCarrito = itemEnCarrito?.quantity ?? 0;
+  const puedeAgregarMas = cantidadEnCarrito < stockDisponible;
   const mensajeWhatsAppDirecto = `¡Hola buenas! Quisiera saber la cotización para "${product.title}" x${localQuantity} en Dorita Shop.\nPrecio referencia: RD$${product.price * localQuantity}`;
 
   useEffect(() => {
@@ -123,47 +126,62 @@ function Quick_view({ product, onClose }: QuickViewProps) {
             <button
               onClick={() => {
                 if (enCarrito) {
-                  updateQuantity(product.id, itemEnCarrito.quantity + 1);
+                  if (puedeAgregarMas) updateQuantity(product.id, itemEnCarrito.quantity + 1);
                 } else {
-                  setLocalQuantity((q) => q + 1);
+                  if (localQuantity < stockDisponible) setLocalQuantity((q) => q + 1);
                 }
               }}
-              className="p-1.5 hover:bg-gray-200 rounded-full transition-colors"
+              disabled={enCarrito ? !puedeAgregarMas : localQuantity >= stockDisponible}
+              className="p-1.5 hover:bg-gray-200 rounded-full transition-colors disabled:opacity-30"
             >
               <Plus size={16} />
             </button>
           </div>
 
           <span className="text-xs text-gray-400">
-            Subtotal: RD$
-            {product.price *
-              (enCarrito ? itemEnCarrito.quantity : localQuantity)}
+            Subtotal: RD${product.price * (enCarrito ? itemEnCarrito.quantity : localQuantity)}
           </span>
+          {stockDisponible > 0 ? (
+            <span className="text-xs text-green-600">
+              {stockDisponible} disponibles
+            </span>
+          ) : (
+            <span className="text-xs text-red-400">
+              Sin stock — puedes consultar por WhatsApp
+            </span>
+          )}
 
           {/* Botón agregar al carrito */}
           <button
             onClick={() => {
-              if (!enCarrito) {
-                // Agrega con la cantidad local que eligió
-                for (let i = 0; i < localQuantity; i++) {
-                  addToCart(product);
-                }
+              if (!enCarrito && stockDisponible > 0) {
+                const cantidad = Math.min(localQuantity, stockDisponible);
+                for (let i = 0; i < cantidad; i++) addToCart(product);
               }
             }}
-            disabled={enCarrito}
+            disabled={enCarrito || stockDisponible === 0}
             className="mt-2 px-8 py-3 bg-gray-900 text-amber-100 uppercase tracking-widest text-sm hover:bg-gray-800 transition-colors disabled:opacity-50"
           >
-            {enCarrito ? "En el carrito ✓" : "Añadir al carrito"}
+            {enCarrito ? "En el carrito ✓" : stockDisponible === 0 ? "Sin stock" : "Añadir al carrito"}
           </button>
 
           {/* Botón WhatsApp directo — independiente del carrito */}
           <Link
-            className="mt-1 px-8 py-3 bg-green-400 text-gray-900 uppercase tracking-widest text-sm hover:bg-green-600 transition-colors"
+            className={cn(
+              "mt-1 px-8 py-3 uppercase tracking-widest text-sm transition-colors text-gray-900",
+              stockDisponible > 0
+                ? "bg-green-400 hover:bg-green-600"
+                : "bg-stone-300 hover:bg-stone-400"
+            )}
             target="_blank"
             rel="noopener noreferrer"
-            href={`https://wa.me/18294973428?text=${encodeURIComponent(mensajeWhatsAppDirecto)}`}
+            href={`https://wa.me/18294973428?text=${encodeURIComponent(
+              stockDisponible > 0
+                ? `¡Hola buenas! Quisiera saber la cotización para "${product.title}" x${localQuantity} en Dorita Shop.\nPrecio referencia: RD$${product.price * localQuantity}`
+                : `¡Hola buenas! Quisiera consultar sobre la disponibilidad de "${product.title}" en Dorita Shop. ¿Cuándo habrá stock?`
+            )}`}
           >
-            Pedir por WhatsApp
+            {stockDisponible > 0 ? "Pedir por WhatsApp" : "Consultar disponibilidad"}
           </Link>
         </div>
       </div>

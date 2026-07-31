@@ -36,7 +36,7 @@ export function Mega_menu({
               item={item}
               onClick={() => {
                 setShopOpen(false);
-                window.location.href = `/catalogo?c=${item.param}`;
+                window.location.href = item.param === "all" ? "/catalogo" : `/catalogo?c=${item.param}`;
               }}
             />
           ))}

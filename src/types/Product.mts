@@ -4,6 +4,8 @@ export interface ProductCardProps {
   title: string;
   desc: string;
   price: number;
+  param: string;
+  stock: number;
   category: string;
   store: string;
   keys: string[];

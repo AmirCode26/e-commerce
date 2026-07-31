@@ -74,7 +74,7 @@ function Side({ open, setOpen }: SideProps) {
             className="flex items-center gap-3 px-3 py-3 text-sm tracking-widest uppercase text-gray-700 hover:bg-amber-50 transition-colors"
           >
             <RiWhatsappLine size={20} className="text-gray-600 shrink-0" />
-            Contacto: +1 (829) 497-3428
+            Contacto: <br/> +1 (829) 497-3428
           </Link>
 
           <div className="h-px bg-stone-200 my-2" />
