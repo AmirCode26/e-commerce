@@ -1,6 +1,6 @@
 // /src/app/page_components/Catalog.tsx
 "use client";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import ProductCard from "@/components/ui/cards/Product_card";
 import { ProductCardProps } from "@/types/Product.mjs";
 import Quick_view from "@/components/catalog/Quick_view";
