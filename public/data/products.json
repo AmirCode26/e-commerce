@@ -6,6 +6,7 @@
       "desc": "Diseño Venezuela full print, colores vibrantes",
       "price": 500,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Camisetas",
       "keys": ["venezuela", "full print", "vibrante", "camisa", "poloche"]
@@ -17,6 +18,7 @@
       "desc": "Diseño personalizado, estilo artístico",
       "price": 500,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Camisetas",
       "keys": ["personalizado", "artistico", "camisa", "poloche"]
@@ -28,6 +30,7 @@
       "desc": "Tienes un amigo en mí, diseño full print manga larga",
       "price": 500,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Camisetas",
       "keys": ["amigo", "full print", "manga larga", "poloche"]
@@ -39,6 +42,7 @@
       "desc": "Diseño guerreras kpop personalizado, colores neón",
       "price": 600,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Termos",
       "keys": ["kpop", "guerreras", "neon", "personalizado"]
@@ -50,6 +54,7 @@
       "desc": "Diseño Venezuela multicolor, edición especial",
       "price": 600,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Termos",
       "keys": ["venezuela", "multicolor", "edicion especial", "termos"]
@@ -61,6 +66,7 @@
       "desc": "Diseño medico, estilo vibrante y colorido",
       "price": 600,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Termos",
       "keys": ["medico", "vibrante", "colorido"]
@@ -72,6 +78,7 @@
       "desc": "Diseño Hello Kitty rosa, edición especial",
       "price": 600,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Termos",
       "keys": ["hello kitty", "rosa", "edicion especial"]
@@ -83,6 +90,7 @@
       "desc": "Tazas al detalle y al por mayor, diseños personalizados",
       "price": 450,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Tazas",
       "keys": ["por mayor", "detalle", "personalizado", "taza"]
@@ -94,6 +102,7 @@
       "desc": "Taza con inicial personalizada, diseño colorido floral",
       "price": 450,
       "param":"sbl",
+      "needStock":false,
       "stock": 0,
       "category": "Tazas",
       "keys": ["inicial", "letra", "floral", "colorido", "taza"]
@@ -105,6 +114,7 @@
       "desc": "Paquete de 16 pañales Sael",
       "price": 180,
       "param":"beb",
+      "needStock":true,
       "stock": 0,
       "category": "Pampers",
       "keys": ["pamper", "sael", "16", "pañales", ""]

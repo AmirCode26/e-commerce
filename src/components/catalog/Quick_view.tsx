@@ -22,7 +22,7 @@ function Quick_view({ product, onClose }: QuickViewProps) {
 
   const itemEnCarrito = cart.find((item) => item.id === product.id);
   const enCarrito = !!itemEnCarrito;
-  const stockDisponible = product.stock;
+  const stockDisponible = product.needStock ? product.stock : Infinity;
   const cantidadEnCarrito = itemEnCarrito?.quantity ?? 0;
   const puedeAgregarMas = cantidadEnCarrito < stockDisponible;
   const mensajeWhatsAppDirecto = `¡Hola buenas! Quisiera saber la cotización para "${product.title}" x${localQuantity} en Dorita Shop.\nPrecio referencia: RD$${product.price * localQuantity}`;
@@ -143,7 +143,7 @@ function Quick_view({ product, onClose }: QuickViewProps) {
           </span>
           {stockDisponible > 0 ? (
             <span className="text-xs text-green-600">
-              {stockDisponible} disponibles
+              {stockDisponible !== Infinity ? stockDisponible : ""} Disponibles
             </span>
           ) : (
             <span className="text-xs text-red-400">

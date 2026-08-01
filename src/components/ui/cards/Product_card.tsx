@@ -5,8 +5,8 @@ import { Lobster_Two } from "next/font/google";
 import { cn } from "@/lib/utils";
 const lobster_two = Lobster_Two({ weight: "400" });
 
-export default function ProductCard({ image, title, onClick, stock }: ProductCardProps) {
-  const agotado = stock === 0;
+export default function ProductCard({ image, title, onClick, stock, needStock }: ProductCardProps) {
+  const agotado = needStock ? stock === 0 : false;
   return (
     <button
       className={cn(

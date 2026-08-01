@@ -5,6 +5,7 @@ export interface ProductCardProps {
   desc: string;
   price: number;
   param: string;
+  needStock: boolean;
   stock: number;
   category: string;
   store: string;
